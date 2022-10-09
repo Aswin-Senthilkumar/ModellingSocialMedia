@@ -1,7 +1,3 @@
-from hashlib import new
-from tracemalloc import get_traceback_limit
-
-
 class Node:
     def __init__(self, neighbours=None):
         neighbours = list()
