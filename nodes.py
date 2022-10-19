@@ -8,16 +8,12 @@ class Node:
         self.name = name
 
     def set_neighbours(self, new_neighbours):
-        '''
-            unpacks new_neighbours into tuples, adds it to self.neighbours
-        '''
+        '''unpacks new_neighbours into tuples, adds it to self.neighbours'''
         for neighbour in new_neighbours:
             self.neighbours.append(neighbour)
 
     def get_trust(self, neighbour):
-        '''
-            Gets trust for specific neighbours
-        '''
+        '''Gets trust for specific neighbours'''
         for locate, trust in self.neighbours:
             if locate == neighbour:
                 return trust
@@ -58,5 +54,5 @@ randomiseTrusts(100)
 
 
 if __name__ == '__main__':
-    print(nodes[0].get_trust(nodes[1]))
+    print(nodes[0].get_trust(nodes[2]))
     print(nodes[1].get_trust(nodes[0]))
